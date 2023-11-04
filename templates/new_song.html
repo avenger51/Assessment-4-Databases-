@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Add Song Form Needs To Be Below</h1>
+
+
+<form method="POST" action="{{ url_for('add_song')}}">
+    {{ form.hidden_tag() }}
+    <div class="form-group">  <!-- bootstrap for form -->
+        {{ form.title.label(class="form-control-label") }}
+        {{ form.title(class="form-control") }}
+        {{ form.artist.label(class="form-control-label")}}
+        {{ form.artist(class="form-control")}}
+       
+    </div>
+    
+  
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}
